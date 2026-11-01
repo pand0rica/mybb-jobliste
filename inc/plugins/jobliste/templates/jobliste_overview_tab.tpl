@@ -1,0 +1,1 @@
+<button type="button" class="jobliste_tab" role="tab" id="jobliste_tab_{$panel_key}" aria-controls="jobliste_panel_{$panel_key}" aria-selected="false" data-jobliste-tab="{$panel_key}"><span class="jobliste_tab_name">{$panel_name}</span><span class="jobliste_tab_count smalltext">{$panel_count}</span></button>

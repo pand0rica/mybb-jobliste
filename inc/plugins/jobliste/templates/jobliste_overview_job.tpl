@@ -1,0 +1,1 @@
+<li class="jobliste_job jobliste_type_{$job_type}" data-jobliste-text="{$job_search_text}"><span class="jobliste_job_entity">{$job_entity_html}</span>{$job_marker_html}{$job_custom_html}{$job_actions}</li>

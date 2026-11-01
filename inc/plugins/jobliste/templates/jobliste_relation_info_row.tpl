@@ -1,0 +1,1 @@
+<span class="jobliste_relinfo_row">{$relinfo_user}{$relinfo_grade}</span>

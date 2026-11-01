@@ -1,0 +1,373 @@
+/* Jobliste - Frontend-Styles (in allen Themes an jobliste.php gebunden) */
+
+.jobliste_actions {
+	white-space: nowrap;
+	text-align: right;
+	width: 1%;
+}
+
+.jobliste_inline_form {
+	display: inline;
+	margin: 0;
+}
+
+/* Row actions (edit/delete/withdraw) are all <form> + <input class="button">, so they
+ * share the theme's native button look. Only the gap between them is set here. */
+.jobliste_inline_form + .jobliste_inline_form {
+	margin-left: 4px;
+}
+
+.jobliste_sep {
+	opacity: 0.6;
+}
+
+.jobliste_custom {
+	font-style: italic;
+}
+
+.jobliste_notice {
+	padding: 8px 10px;
+	border: 1px dashed rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+}
+
+.jobliste_submit {
+	text-align: center;
+	margin: 8px 0;
+}
+
+.jobliste_delete_block {
+	text-align: center;
+	margin: 4px 0 10px;
+}
+
+/* Kombo-Feld (Kategorie-Auswahl) */
+
+.jobliste_combo {
+	max-width: 520px;
+}
+
+.jobliste_combo_search,
+.jobliste_combo_select,
+.jobliste_custom_input {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.jobliste_combo_search {
+	margin-bottom: 4px;
+}
+
+.jobliste_combo_selected {
+	margin-top: 4px;
+	min-height: 1.2em;
+}
+
+.jobliste_custom_row.jobliste_hidden,
+.jobliste_levels_row.jobliste_hidden,
+.jobliste_level_group.jobliste_hidden {
+	display: none;
+}
+
+/* Beruf-Felder im Personenformular des Relatives-Plugins und im ACP-NPC-Formular */
+
+.jobliste_relatives_fields .jobliste_relatives_desc,
+.jobliste_relatives_fields .jobliste_custom_row,
+.jobliste_relatives_fields .jobliste_levels_row,
+.jobliste_acp_job .jobliste_custom_row,
+.jobliste_acp_job .jobliste_levels_row,
+.jobliste_relatives_more {
+	margin: 4px 0 6px;
+}
+
+.jobliste_relatives_fields .jobliste_custom_row label,
+.jobliste_relatives_sublabel,
+.jobliste_acp_sublabel {
+	display: block;
+	font-weight: bold;
+}
+
+/* Ebenen (Kategorietyp "levels") */
+
+.jobliste_level_group {
+	margin: 0 0 8px;
+}
+
+.jobliste_level_group_title {
+	margin-bottom: 4px;
+	opacity: 0.75;
+}
+
+.jobliste_level {
+	display: block;
+	margin: 0 0 6px;
+}
+
+.jobliste_level span {
+	display: inline-block;
+	min-width: 90px;
+	font-weight: bold;
+}
+
+.jobliste_level select {
+	max-width: 100%;
+}
+
+/* Gesamtuebersicht */
+
+.jobliste_overview_tools {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: center;
+	margin-bottom: 6px;
+}
+
+.jobliste_overview_tools .jobliste_filter {
+	flex: 1 1 220px;
+	max-width: 360px;
+}
+
+.jobliste_tree details.jobliste_cat {
+	margin: 2px 0;
+}
+
+.jobliste_tree details.jobliste_cat > summary {
+	cursor: pointer;
+	padding: 3px 0;
+}
+
+.jobliste_tree details.jobliste_depth_0 > summary {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.jobliste_tree .jobliste_cat_body {
+	margin-left: 18px;
+	padding-left: 8px;
+	border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.jobliste_tree .jobliste_cat_empty > summary .jobliste_cat_name {
+	opacity: 0.6;
+}
+
+.jobliste_jobs {
+	list-style: none;
+	margin: 2px 0 6px;
+	padding: 0;
+}
+
+.jobliste_jobs li {
+	padding: 2px 0;
+}
+
+.jobliste_badge {
+	display: inline-block;
+	padding: 0 5px;
+	margin-left: 4px;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.07);
+}
+
+/* Tabs je Wurzelkategorie (nur mit JS; ohne JS stehen die Panels untereinander) */
+
+/* Tab-Leiste im Stil der Relatives-UserCP-Navigation: Farben aus currentColor, damit
+ * die Leiste sich jedem Theme anpasst; Akzent per --jobliste-accent ueberschreibbar. */
+.jobliste_tabs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 2px;
+	margin: 6px 0 0;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.jobliste_tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	padding: 8px 14px 7px;
+	margin-bottom: -1px;
+	border: 0;
+	border-bottom: 3px solid transparent;
+	border-radius: 4px 4px 0 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	opacity: 0.7;
+	transition: opacity 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.jobliste_tab:hover,
+.jobliste_tab:focus-visible {
+	opacity: 1;
+	background-color: rgba(128, 128, 128, 0.12);
+	border-bottom-color: rgba(128, 128, 128, 0.45);
+	outline: none;
+}
+
+.jobliste_tab .jobliste_tab_count {
+	display: inline-block;
+	min-width: 1.4em;
+	padding: 0 6px;
+	border-radius: 999px;
+	background: rgba(128, 128, 128, 0.18);
+	font-weight: normal;
+	line-height: 1.6;
+	text-align: center;
+}
+
+/* Aktueller Tab: voll deckend, fett, Akzent-Unterstrich. */
+.jobliste_tab[aria-selected="true"],
+.jobliste_tab[aria-selected="true"]:hover,
+.jobliste_tab[aria-selected="true"]:focus-visible {
+	font-weight: bold;
+	opacity: 1;
+	background-color: transparent;
+	border-bottom-color: var(--jobliste-accent, currentColor);
+}
+
+.jobliste_tab.jobliste_tab_nohits {
+	opacity: 0.35;
+}
+
+.jobliste_panel {
+	margin: 8px 0 12px;
+}
+
+.jobliste_panel_title {
+	margin: 10px 0 4px;
+	font-size: 1.15em;
+}
+
+.jobliste_tree.jobliste_tabs_ready .jobliste_panel {
+	margin-top: 8px;
+}
+
+.jobliste_tree.jobliste_tabs_ready .jobliste_panel_title,
+.jobliste_tree.jobliste_tabs_ready .jobliste_panel[hidden] {
+	display: none;
+}
+
+/* Info-Icon bei Verwandten: Popup mit den eintragenden Charakteren (Hover, Fokus, Klick) */
+
+.jobliste_relinfo {
+	position: relative;
+	display: inline-block;
+	margin-left: 4px;
+	vertical-align: baseline;
+}
+
+.jobliste_relinfo_toggle {
+	cursor: pointer;
+	width: 1.35em;
+	height: 1.35em;
+	padding: 0;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	background: transparent;
+	color: inherit;
+	font: italic bold 0.75em/1.2 Georgia, serif;
+	text-align: center;
+	opacity: 0.6;
+}
+
+.jobliste_relinfo_toggle:hover,
+.jobliste_relinfo_toggle:focus-visible,
+.jobliste_relinfo.jobliste_relinfo_open .jobliste_relinfo_toggle {
+	opacity: 1;
+}
+
+.jobliste_relinfo_pop {
+	display: none;
+	position: absolute;
+	z-index: 50;
+	top: calc(100% + 4px);
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: 180px;
+	max-width: 280px;
+	padding: 6px 9px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	background: #fff;
+	color: #333;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	font-size: 0.9em;
+	text-align: left;
+	white-space: normal;
+}
+
+.jobliste_relinfo:hover .jobliste_relinfo_pop,
+.jobliste_relinfo:focus-within .jobliste_relinfo_pop,
+.jobliste_relinfo.jobliste_relinfo_open .jobliste_relinfo_pop {
+	display: block;
+}
+
+.jobliste_relinfo.jobliste_relinfo_closed .jobliste_relinfo_pop {
+	display: none;
+}
+
+.jobliste_relinfo_head {
+	display: block;
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+
+.jobliste_relinfo_row {
+	display: block;
+	padding: 1px 0;
+}
+
+.jobliste_edit_link {
+	display: inline-block;
+	margin-left: 6px;
+	vertical-align: middle;
+	line-height: 1;
+	opacity: 0.6;
+}
+
+.jobliste_edit_link:hover,
+.jobliste_edit_link:focus {
+	opacity: 1;
+}
+
+.jobliste_edit_link svg {
+	display: block;
+}
+
+.jobliste_filtered_out {
+	display: none !important;
+}
+
+@media (max-width: 600px) {
+	.jobliste_actions {
+		white-space: normal;
+	}
+
+	.jobliste_tree .jobliste_cat_body {
+		margin-left: 8px;
+	}
+
+	.jobliste_relinfo_pop {
+		left: 0;
+		transform: none;
+	}
+}
+
+/* Kategorie-Antraege (UserCP) */
+.jobliste_status_pending {
+	font-style: italic;
+}
+
+.jobliste_status_approved {
+	color: #2e7d32;
+	font-weight: bold;
+}
+
+.jobliste_status_rejected {
+	color: #c62828;
+	font-weight: bold;
+}
