@@ -9,6 +9,15 @@ All notable changes to this plugin are documented here. Format based on
 Complete rewrite of the legacy job plugin (*h4w-multiple-berufe* / *jobs*, v1.x). First public
 release of the new code base.
 
+### Security (review)
+- All ACP write handlers (categories, levels, NPCs, moderation, migration) check the return
+  value of `verify_post_check()` via `jobliste_acp_verify_key()`; in the ACP the function does
+  not abort on its own.
+
+### Changed (review)
+- German help texts no longer use the colon gender form (“Nutzer:innen”, “Lehrer:in”).
+- Plugin website points to `pand0rica/mybb-jobliste`.
+
 ### Added
 - Own category tree (places/businesses) managed in the ACP: add, edit, delete, reorder,
   activate/deactivate, "free text allowed" per category. Replaces the legacy linked-list table

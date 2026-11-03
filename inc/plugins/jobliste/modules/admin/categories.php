@@ -36,7 +36,7 @@ if (in_array($do, ['levels', 'level_save', 'level_delete', 'level_move'], true))
 // --- do=move (POST) -------------------------------------------------------------------
 
 if ($do === 'move' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
+    jobliste_acp_verify_key();
     Jobliste_Categories::move($id, $mybb->get_input('direction'));
     admin_redirect($base_url . '#cat' . $id);
 }
@@ -44,7 +44,7 @@ if ($do === 'move' && $mybb->request_method === 'post') {
 // --- do=delete (POST) -----------------------------------------------------------------
 
 if ($do === 'delete' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
+    jobliste_acp_verify_key();
     $moved = 0;
     $error = Jobliste_Categories::delete($id, $moved);
     if ($error !== '') {
@@ -70,7 +70,7 @@ if ($do === 'add' || $do === 'edit') {
     }
 
     if ($mybb->request_method === 'post') {
-        verify_post_check($mybb->get_input('my_post_key'));
+        jobliste_acp_verify_key();
 
         $data = [
             'name'              => $mybb->get_input('name'),

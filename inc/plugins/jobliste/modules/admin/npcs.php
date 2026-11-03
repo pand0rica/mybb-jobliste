@@ -73,7 +73,7 @@ function jobliste_acp_posted_job(string $prefix): array
 // --- do=delete (POST) -----------------------------------------------------------------
 
 if ($do === 'delete' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
+    jobliste_acp_verify_key();
     if (Jobliste_Database::get_npc($id) === null) {
         flash_message($lang->jobliste_acp_not_found, 'error');
     } else {
@@ -105,7 +105,7 @@ if ($do === 'add' || $do === 'edit') {
 
     $errors = [];
     if ($mybb->request_method === 'post') {
-        verify_post_check($mybb->get_input('my_post_key'));
+        jobliste_acp_verify_key();
 
         $name = $mybb->get_input('name');
         $notes = $mybb->get_input('notes');
