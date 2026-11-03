@@ -10,9 +10,9 @@ Complete rewrite of the legacy job plugin (*h4w-multiple-berufe* / *jobs*, v1.x)
 release of the new code base.
 
 ### Security (review)
-- All ACP write handlers (categories, levels, NPCs, moderation, migration) check the return
-  value of `verify_post_check()` via `jobliste_acp_verify_key()`; in the ACP the function does
-  not abort on its own.
+- ACP CSRF protection uses MyBB's native mechanism (dev kit `debugging.md` #23): write
+  handlers only act on POST and `admin/index.php` validates the `my_post_key` itself –
+  no own key check or helper.
 
 ### Changed (review)
 - German help texts no longer use the colon gender form (“Nutzer:innen”, “Lehrer:in”).

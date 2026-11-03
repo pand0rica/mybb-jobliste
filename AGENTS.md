@@ -30,5 +30,5 @@ umgesetzt und migriert sein (die Jobliste-Migration löst Legacy-Beruf-Daten üb
 | „release das Projekt" | Release | `D:\mybb-plugin-dev-kit\workflows\4-release.md` |
 
 ## Die 5 goldenen Regeln (Kurzform, Details im Kit)
-Keine Core-Edits · `TABLE_PREFIX` · `$mybb->get_input()` · POST + `verify_post_check()` ·
+Keine Core-Edits · `TABLE_PREFIX` · `$mybb->get_input()` · POST + `verify_post_check()` (Frontend; im ACP nur POST-Pflicht, Key prüft MyBB) ·
 alles mit Präfix `jobliste`. Ausgabe `htmlspecialchars_uni()`, SQL `escape_string()`/`(int)`.

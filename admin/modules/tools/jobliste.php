@@ -24,19 +24,6 @@ $page->add_breadcrumb_item($lang->jobliste, "index.php?module=tools-jobliste");
 /**
  * Gemeinsame Tab-Navigation fuer alle ACP-Seiten (globale CLAUDE.md "ACP Page Structure").
  */
-/**
- * Schreibende ACP-Aktionen: verify_post_check() bricht im ACP nicht ab,
- * daher Rückgabewert prüfen (debugging.md #23).
- */
-function jobliste_acp_verify_key(): void
-{
-    global $mybb, $lang;
-
-    if (!verify_post_check($mybb->get_input('my_post_key'), true)) {
-        flash_message($lang->invalid_post_verify_key2, 'error');
-        admin_redirect('index.php?module=tools-jobliste');
-    }
-}
 
 function jobliste_acp_nav_tabs(string $active): void
 {

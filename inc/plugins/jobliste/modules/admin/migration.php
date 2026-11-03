@@ -16,7 +16,6 @@ $last_run = Jobliste_Migration::last_run();
 
 $report = null;
 if ($mybb->get_input('do') === 'run' && $mybb->request_method === 'post') {
-    jobliste_acp_verify_key();
 
     $report = Jobliste_Migration::run([
         'force'            => $mybb->get_input('force', MyBB::INPUT_INT) === 1,
