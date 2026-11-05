@@ -13,7 +13,7 @@
 - **MyBB:** 1.8.x · **PHP:** 7.4 + 8.x
 
 ## Zweck & Zielgruppe
-RPG-Charakterforum (h4w-rpg.de): Übersicht, wer welchen Beruf/Arbeitsplatz im Rollenspiel-Setting
+RPG-Charakterforum: Übersicht, wer welchen Beruf/Arbeitsplatz im Rollenspiel-Setting
 hat – für eigene Charaktere, für Verwandte (optional, siehe Abhängigkeiten) und für NPCs
 (Team-Verwaltung). Neu gegenüber dem Altplugin: eigener, ACP-verwalteter Kategoriebaum (statt
 der alten Linked-List-Tabelle, die technisch dem Verwandtschafts-Plugin gehörte), vereinfachtes

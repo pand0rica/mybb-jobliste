@@ -26,7 +26,6 @@ if ($level !== null && $level['category_id'] !== $id) {
 // --- level_move / level_delete / level_save (POST) ------------------------------------
 
 if ($do === 'level_move' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
     if ($level !== null) {
         Jobliste_Levels::move($level['id'], $mybb->get_input('direction'));
     }
@@ -34,7 +33,6 @@ if ($do === 'level_move' && $mybb->request_method === 'post') {
 }
 
 if ($do === 'level_delete' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
     if ($level === null) {
         flash_message($lang->jobliste_acp_not_found, 'error');
     } else {
@@ -45,7 +43,6 @@ if ($do === 'level_delete' && $mybb->request_method === 'post') {
 }
 
 if ($do === 'level_save' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
     $data = [
         'label'            => $mybb->get_input('label'),
         'source'           => $mybb->get_input('source'),

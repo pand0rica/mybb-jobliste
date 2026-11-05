@@ -47,7 +47,7 @@ function jobliste_info(): array
     return [
         "name"          => "Jobliste",
         "description"   => "Verwaltet einen ACP-pflegbaren Kategoriebaum (Arbeitsorte/Branchen) und laesst Nutzer:innen Berufe fuer sich, ihre Verwandten (optional, Relatives-Plugin) und das Team fuer NPCs eintragen.",
-        "website"       => "https://github.com/pand0rica/jobliste",
+        "website"       => "https://github.com/pand0rica/mybb-jobliste",
         "author"        => "pand0rica",
         "authorsite"    => "https://github.com/pand0rica",
         "version"       => "2.0.0",

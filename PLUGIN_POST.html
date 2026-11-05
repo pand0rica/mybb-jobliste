@@ -1,0 +1,105 @@
+[size=x-large][b]Jobliste[/b][/size]
+[i]Version 2.0.0[/i] – Wer arbeitet wo? Berufe und Arbeitsplätze deiner Charaktere (und ihrer Verwandten) in einem Kategoriebaum, mit durchsuchbarer Gesamtliste.
+
+[size=large][b]Worum geht's?[/b][/size]
+
+„Wer arbeitet eigentlich im Tropfenden Kessel?" – in vielen Foren beantwortet das eine riesige verschachtelte Tabelle, die nur das Team pflegen kann. Mit der Jobliste tragen die Mitglieder die Berufe ihrer Charaktere selbst ein und wählen dafür aus einem Kategoriebaum, den das Team im ACP aufbaut (Orte, Betriebe, Branchen). Alles landet in einer aufklappbaren, durchsuchbaren Gesamtliste, gruppiert nach Kategorien.
+
+[size=large][b]Highlights[/b][/size]
+
+[list]
+[*] Berufe selbst eintragen – für eigene Charaktere, Verwandte und NPCs
+[*] Kategoriebaum mit Tabs, aufklappbar und durchsuchbar
+[*] Stufen-Kategorien (z. B. Land › Branche) statt hunderter Unterkategorien
+[*] Mitglieder beantragen fehlende Arbeitsplätze, das Team gibt sie frei
+[*] Integration mit Relatives: Beruf direkt im Personenformular und im Stammbaum
+[/list]
+
+[size=large][b]Was das Plugin alles kann[/b][/size]
+
+[b]Für Mitglieder[/b]
+[list]
+[*][b]Beruf eintragen[/b] – Für den eigenen Charakter oder (mit Relatives) eine selbst angelegte verwandte Person: Kategorie per Suchfeld wählen, bei Stufen-Kategorien je Stufe einen Wert, wo erlaubt eine eigene Berufsbezeichnung. Eigene Einträge bearbeitest und löschst du darunter. [i](Benutzer-CP → Sonstiges → Berufe)[/i]
+[*][b]Gesamtliste[/b] – Ein Tab pro Hauptkategorie, aufklappbare Kategorien mit Anzahl, Suche über alle Tabs, verlinkbare Tabs. Accounts erscheinen in Gruppenfarbe, NPCs mit Abzeichen, Verwandte mit einem Info-Symbol, wer sie angelegt hat. [i](jobliste.php?action=overview)[/i]
+[*][b]Kategorie beantragen[/b] – Fehlt ein Arbeitsplatz, beantragst du ihn mit Platz im Baum und kurzer Begründung; Status und Antwort des Teams siehst du direkt. [i](Benutzer-CP → Berufe)[/i]
+[/list]
+
+[b]Für Team & Moderation[/b]
+[list]
+[*][b]Anträge prüfen[/b] – Anträge annehmen (Name, Platz und Freitext-Option noch anpassbar) oder mit Begründung ablehnen; auf Wunsch bekommt die Person eine PN. Ein roter Hinweis auf der Startseite zeigt offene Anträge. [i](ModCP → Jobliste → Kategorie-Anträge)[/i]
+[*][b]NPCs[/b] – NPCs anlegen, bearbeiten und löschen und ihnen Berufe geben. [i](Benutzer-CP → Berufe → NPCs verwalten)[/i]
+[*][b]Fremde Einträge pflegen[/b] – Das Team bearbeitet und löscht alle Einträge direkt in der Gesamtliste.
+[/list]
+
+[b]Für Administratoren[/b]
+[list]
+[*][b]Kategoriebaum[/b] – Kategorien anlegen, verschachteln, sortieren, aktivieren/deaktivieren und Freitext erlauben. Beim Löschen wandern die Berufe in die Elternkategorie. [i](ACP → Werkzeuge → Jobliste → Kategoriebaum)[/i]
+[*][b]Stufen[/b] – Für große Bereiche definierst du geordnete Stufen, deren Werte aus einem Profilfeld oder einer eigenen Liste kommen. [i](ACP → Jobliste → Stufen bearbeiten)[/i]
+[*][b]Moderation[/b] – Alle Berufe mit Filtern nach Typ, Kategorie und Suchtext, inklusive Löschen. [i](ACP → Jobliste → Berufe-Moderation)[/i]
+[*][b]Migration[/b] – Übernimmt Daten aus dem alten Berufe-Plugin, mit Bericht und erneutem Lauf ohne Duplikate. [i](ACP → Jobliste → Migration)[/i]
+[/list]
+
+[b]Zusammenspiel mit anderen Plugins[/b]
+[list]
+[*][b]Relatives & Family Tree[/b] – Berufe auch für Verwandte; im Personenformular von Relatives gibt es ein Berufsfeld, und Relatives zeigt Berufe im Stammbaum, in der Verwandtenliste und auf den Profilkarten. Ohne Relatives funktioniert die Jobliste für Charaktere und NPCs eigenständig.
+[*][b]MyAlerts & Account Switcher[/b] – reagieren auf die PN bei Antrags-Entscheidungen wie auf jede normale PN.
+[/list]
+
+[size=large][b]So sieht's aus[/b][/size]
+
+[i]Screenshot folgt[/i] – Gesamtliste mit Tabs
+[i]Screenshot folgt[/i] – Beruf im Benutzer-CP eintragen
+[i]Screenshot folgt[/i] – Kategoriebaum und Stufen im ACP
+[i]Screenshot folgt[/i] – Anträge im ModCP
+
+[size=large][b]Einstellungen[/b][/size]
+
+[list]
+[*][b]Jobliste aktiv[/b] – Hauptschalter.
+[*][b]Team-Gruppen[/b] – dürfen NPC-Berufe anlegen und fremde Einträge bearbeiten.
+[*][b]Verwandten-Integration[/b] – Berufe für Verwandte aus Relatives erlauben.
+[*][b]Maximale Berufe pro Person[/b] – 0 = unbegrenzt.
+[*][b]Gesamtliste für Gäste[/b] und optionale [b]Rahmen-/Navigations-Templates[/b], um die Liste in deine anderen Listen einzubetten.
+[*][b]Kategorie-Anträge[/b] und [b]PN bei Entscheidung[/b]
+[/list]
+
+[size=large][b]Voraussetzungen[/b][/size]
+
+[list]
+[*] MyBB 1.8.x
+[*] PHP 7.4 oder 8.x, MySQL 5.7+ bzw. MariaDB 10.2+
+[*] Optional: Relatives & Family Tree
+[/list]
+
+[size=large][b]Installation[/b][/size]
+
+[list=1]
+[*] Dateien in das MyBB-Stammverzeichnis kopieren ([i]jobliste.php[/i] neben die [i]index.php[/i])
+[*] ACP → Konfiguration → Plugins → Jobliste → Installieren & aktivieren
+[*] ACP → Konfiguration → Einstellungen → Jobliste → mindestens die Team-Gruppen festlegen
+[*] ACP → Werkzeuge → Jobliste → Kategoriebaum aufbauen
+[*] Einen Link auf [i]jobliste.php?action=overview[/i] in deine Listen-Navigation setzen
+[/list]
+
+[size=large][b]Update[/b][/size]
+
+[list=1]
+[*] Neue Dateien hochladen und vorhandene überschreiben
+[*] ACP → Konfiguration → Plugins → Jobliste → Deaktivieren und wieder Aktivieren
+[/list]
+Templates und Stylesheet werden aktualisiert; Einstellungen und Daten bleiben erhalten. Kommst du vom alten Berufe-Plugin, führe vorher die Migration im ACP aus.
+
+[size=large][b]Grenzen & Ausblick[/b][/size]
+
+Im Personenformular von Relatives lässt sich nur der erste Beruf einer Person bearbeiten; weitere pflegst du in der Jobliste. Pro Person sind höchstens fünf offene Kategorie-Anträge möglich.
+
+[size=large][b]Download & Quellcode[/b][/size]
+
+&raquo; [url=https://github.com/pand0rica/mybb-jobliste]GitHub: pand0rica/mybb-jobliste[/url] – Änderungen im [url=https://github.com/pand0rica/mybb-jobliste/blob/main/CHANGELOG.md]Changelog[/url], Lizenz GPL-3.0
+
+[size=large][b]Unterstützung[/b][/size]
+
+<i class="cp cp-tea"></i> Wenn dir das Plugin gefällt, kannst du mir gerne einen Tee spendieren: [url=https://ko-fi.com/pand0rica]ko-fi.com/pand0rica[/url]
+
+[size=small]Fragen, Bugs oder Feature-Wünsche gerne als GitHub Issue melden oder hier im Thread.
+Ich freue mich, wenn ihr mir den Link dalasst, wo das Plugin verwendet wird.[/size]

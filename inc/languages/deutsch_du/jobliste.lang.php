@@ -46,7 +46,7 @@ $l['jobliste_field_entity'] = "Für wen?";
 $l['jobliste_field_category'] = "Arbeitsort / Beruf";
 $l['jobliste_field_category_desc'] = "Tippe ins Suchfeld, um die Liste zu filtern, und wähle dann einen Eintrag aus.";
 $l['jobliste_field_custom_label'] = "Genaue Tätigkeit";
-$l['jobliste_field_custom_label_desc'] = "Optional, z. B. „Lehrer:in für Zaubertränke“. Nur bei Kategorien möglich, die Freitext erlauben.";
+$l['jobliste_field_custom_label_desc'] = "Optional, z. B. „Lehrkraft für Zaubertränke“. Nur bei Kategorien möglich, die Freitext erlauben.";
 $l['jobliste_search_placeholder'] = "Kategorie suchen …";
 $l['jobliste_no_categories'] = "Es wurden noch keine Kategorien angelegt. Das Team kann sie im Admin-CP unter Werkzeuge & Wartung → Jobliste anlegen.";
 

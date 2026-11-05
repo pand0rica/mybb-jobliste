@@ -24,6 +24,7 @@ $page->add_breadcrumb_item($lang->jobliste, "index.php?module=tools-jobliste");
 /**
  * Gemeinsame Tab-Navigation fuer alle ACP-Seiten (globale CLAUDE.md "ACP Page Structure").
  */
+
 function jobliste_acp_nav_tabs(string $active): void
 {
     global $page, $lang;

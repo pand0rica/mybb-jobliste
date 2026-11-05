@@ -9,6 +9,15 @@ All notable changes to this plugin are documented here. Format based on
 Complete rewrite of the legacy job plugin (*h4w-multiple-berufe* / *jobs*, v1.x). First public
 release of the new code base.
 
+### Security (review)
+- ACP CSRF protection uses MyBB's native mechanism (dev kit `debugging.md` #23): write
+  handlers only act on POST and `admin/index.php` validates the `my_post_key` itself –
+  no own key check or helper.
+
+### Changed (review)
+- German help texts no longer use the colon gender form (“Nutzer:innen”, “Lehrer:in”).
+- Plugin website points to `pand0rica/mybb-jobliste`.
+
 ### Added
 - Own category tree (places/businesses) managed in the ACP: add, edit, delete, reorder,
   activate/deactivate, "free text allowed" per category. Replaces the legacy linked-list table

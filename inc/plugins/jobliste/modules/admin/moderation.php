@@ -28,7 +28,6 @@ $filter_query = '&entity_type=' . urlencode($filter_type)
 // --- do=delete (POST) -----------------------------------------------------------------
 
 if ($do === 'delete' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
     $job = Jobliste_Database::get_job($mybb->get_input('id', MyBB::INPUT_INT));
     if ($job === null) {
         flash_message($lang->jobliste_acp_not_found, 'error');
@@ -42,7 +41,6 @@ if ($do === 'delete' && $mybb->request_method === 'post') {
 // --- do=cleanup_orphans (POST): verwaiste Verwandten-Berufe loeschen ------------------
 
 if ($do === 'cleanup_orphans' && $mybb->request_method === 'post') {
-    verify_post_check($mybb->get_input('my_post_key'));
     $orphans = Jobliste_EntityResolver::find_orphaned_relative_jobs();
     foreach ($orphans as $job) {
         Jobliste_Database::delete_job((int)$job['id']);
