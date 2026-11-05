@@ -188,7 +188,7 @@ Testserver (`testing.md` §7).
 ## Abhängigkeiten
 - Keine Pflicht-Abhängigkeiten – Plugin funktioniert komplett eigenständig (nur `entity_type=
   'user'`/`'npc'`, keine Verwandten-Auswahl, wenn Relatives fehlt).
-- **Optionale Abhängigkeit:** `relatives` (Repo `F:\RPG\Mybb Plugins - eigene\relatives`) –
+- **Optionale Abhängigkeit:** `relatives` (Repo `mybb-relatives`) –
   liefert über die o.g. Hooks Verwandten-Entitäten. Erkennung NICHT über Plugin-Cache-Check
   nötig (reines Hook-Feuern, harmlos wenn niemand zuhört), aber `jobliste_relatives_integration`
   erlaubt zusätzliches admin-seitiges Abschalten. Integration aus = die Provider-Hooks werden gar nicht gefeuert; vorhandene

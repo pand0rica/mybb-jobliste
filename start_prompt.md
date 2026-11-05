@@ -3,18 +3,18 @@
 Du setzt das MyBB-1.8-Plugin **Jobliste** (Codename `jobliste`) um. Das Umsetzungs-Paket aus
 Phase 1 liegt bereits vollständig im Repo:
 
-  F:\RPG\Mybb Plugins - eigene\jobliste
+  mybb-jobliste
 
 Lies in dieser Reihenfolge, BEVOR du irgendetwas tust:
 1. `AGENTS.md` (dieses Repo) – Pointer aufs Dev-Kit, 5 goldene Regeln, Phasen-Zuordnung.
 2. `PROJECT_CONTEXT.md` (dieses Repo) – Architektur, Tabellen, Settings, Hooks, Abhängigkeiten,
    „What NOT to change".
 3. `IMPLEMENTATION_PLAN.md` (dieses Repo) – die nummerierten Arbeitsschritte.
-4. Aus dem Dev-Kit bei Bedarf: `D:\mybb-plugin-dev-kit\standards\boilerplate.md` (kopierfertige
-   Code-Vorlagen) und `D:\mybb-plugin-dev-kit\standards\conventions.md` (Naming, DB, Hooks,
+4. Aus dem Dev-Kit bei Bedarf: `<dev-kit>/standards/boilerplate.md` (kopierfertige
+   Code-Vorlagen) und `<dev-kit>/standards/conventions.md` (Naming, DB, Hooks,
    Security).
 
-Folge danach exakt `D:\mybb-plugin-dev-kit\workflows\2-implement.md`:
+Folge danach exakt `<dev-kit>/workflows/2-implement.md`:
 - Arbeite die Schritte aus `IMPLEMENTATION_PLAN.md` der Reihe nach ab und hake sie dort ab
   (`- [x]`), inklusive des jeweiligen Test-/Abnahmehinweises.
 - Halte bei jedem Schritt die 5 goldenen Regeln ein: keine Core-Dateien ändern, `TABLE_PREFIX`
@@ -27,7 +27,7 @@ Folge danach exakt `D:\mybb-plugin-dev-kit\workflows\2-implement.md`:
   umzusetzen.
 - Sprachdateien: englisch + deutsch_du, Frontend- und Admin-Sets strikt getrennt.
 
-**Abhängigkeiten:** Optionale Integration mit `F:\RPG\Mybb Plugins - eigene\relatives` über die
+**Abhängigkeiten:** Optionale Integration mit `mybb-relatives` über die
 in diesem Repo selbst definierten Provider-Hooks `jobliste_collect_entities`/
 `jobliste_resolve_entity_label` – die Schritte 1–7 (Grundgerüst bis ACP) sind davon unabhängig
 und können sofort begonnen werden. **Schritt 8 (Migration) setzt dagegen zwingend voraus, dass

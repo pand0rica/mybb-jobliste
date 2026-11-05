@@ -1,11 +1,11 @@
 # Jobliste – Implementation Plan
 
-**Umsetzung:** folge `D:\mybb-plugin-dev-kit\workflows\2-implement.md`. Schritte der Reihe
+**Umsetzung:** folge `<dev-kit>/workflows/2-implement.md`. Schritte der Reihe
 nach. Bei Unklarheit gezielt nachfragen, aber nicht umplanen. Schritt nach Erledigung auf
 `- [x]` setzen.
 
 **Voraussetzung:** Das Schwester-Plugin `relatives`
-(`F:\RPG\Mybb Plugins - eigene\relatives`) sollte bereits umgesetzt sein, bevor Schritt 8
+(`mybb-relatives`) sollte bereits umgesetzt sein, bevor Schritt 8
 (Migration) begonnen wird – siehe dortige `PROJECT_CONTEXT.md`.
 
 ---
@@ -16,7 +16,7 @@ nach. Bei Unklarheit gezielt nachfragen, aber nicht umplanen. Schritt nach Erled
       modules/admin`) anlegen.
 - **Dateien:** `inc/plugins/jobliste.php`, `inc/plugins/jobliste/core/*.php` (leere
   Klassen-Gerüste: `Database`, `Categories`, `EntityResolver`, `Installer`, `Migration`)
-- **Vorlage:** `D:\mybb-plugin-dev-kit\standards\boilerplate.md` §1, §2
+- **Vorlage:** `<dev-kit>/standards/boilerplate.md` §1, §2
 - **Abnahme:** `php -l` sauber; Plugin erscheint in der ACP-Pluginliste.
 
 ## Schritt 2 – Lifecycle (install/is_installed/uninstall)
@@ -137,12 +137,12 @@ nach. Bei Unklarheit gezielt nachfragen, aber nicht umplanen. Schritt nach Erled
 - **Dateien:** `inc/languages/english/jobliste.lang.php` (+ `admin/jobliste.lang.php`),
   `inc/languages/deutsch_du/jobliste.lang.php` (+ `admin/jobliste.lang.php`)
 - **Vorlage:** `boilerplate.md` §13
-- **Abnahme:** `D:\mybb-plugin-dev-kit\scripts\lang_check.ps1` ohne fehlende Keys.
+- **Abnahme:** `<dev-kit>/scripts/lang_check.ps1` ohne fehlende Keys.
 
 ## Schritt 11 – Selbsttests finalisieren
 - [x] **Ziel:** `tests/cli-plugin.php` (Lifecycle) + `tests/cli-selftest.php` (Kategoriebaum-
       Zyklenschutz, Entity-Berechtigungsprüfung, Migrations-Pfad-Parsing gegen die echten
-      Beispieldaten aus `F:\RPG\Mybb Plugins - eigene\Alt und zu überarbeiten\Verwandte\php5\
+      Beispieldaten aus `<alter-plugin-ordner>/php5/
       SQL\mybb_relatives_items.sql`, Provider-Hook-Fallback-Verhalten).
 - **Vorlage:** `testing.md` §3, §4
 - **Abnahme:** Lifecycle grün, Selbsttest 0 failed.
