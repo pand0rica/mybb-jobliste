@@ -9,6 +9,9 @@ All notable changes to this plugin are documented here. Format based on
 Complete rewrite of the legacy job plugin (*h4w-multiple-berufe* / *jobs*, v1.x). First public
 release of the new code base.
 
+### Fixed
+- **UserCP menu icon follows the link colour.** The icon is an inline SVG using `currentColor` instead of a fixed grey background image.
+
 ### Security (review)
 - ACP CSRF protection uses MyBB's native mechanism (dev kit `debugging.md` #23): write
   handlers only act on POST and `admin/index.php` validates the `my_post_key` itself –
